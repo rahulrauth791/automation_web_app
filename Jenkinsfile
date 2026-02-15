@@ -33,8 +33,8 @@ pipeline {
                 script {
                     def suiteMap = [
                         Login      : 'src/test/resources/login.xml',
-                        Sanity     : 'src/test/resources/sanity.xml',
-                        Regression : 'src/test/resources/regression.xml'
+                        Youtube    : 'src/test/resources/youtube.xml',
+                        Regression : 'src/test/resources/Online.xml'
                     ]
 
                     env.SUITE_FILE = suiteMap[params.TEST_SUITE]
