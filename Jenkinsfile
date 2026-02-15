@@ -15,7 +15,7 @@ pipeline {
     }
 
     tools {
-        jdk 'jdk17'
+        jdk 'JDK17'
         maven 'Maven3'
     }
 
@@ -27,12 +27,12 @@ pipeline {
             }
         }
 
-        stage('Run TestNG Suite') {
+        stage('Run Selected TestNG Suite') {
             steps {
                 sh """
-                mvn clean test \
-                -Dsurefire.suiteXmlFiles=${params.TEST_SUITE} \
-                -Dbrowser=${params.BROWSER}
+                    mvn clean test \
+                    -Dsurefire.suiteXmlFiles=${params.TEST_SUITE} \
+                    -Dbrowser=${params.BROWSER}
                 """
             }
         }
