@@ -2,8 +2,7 @@
 <suite name="AutomationWebAppSuite" parallel="classes" thread-count="2">
   <test name="UI Tests">
     <classes>
-      <class name="tests.LoginTest"/>
-      <class name="tests.OnlineTest"/>
+      <class name="tests.YoutubeTest"/>
       <!-- add other test classes here as needed -->
     </classes>
   </test>
