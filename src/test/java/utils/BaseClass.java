@@ -32,11 +32,13 @@ public class BaseClass {
         // load config.properties from classpath or from path provided via -Dconfig.file
         Properties config = new Properties();
         String configPath = System.getProperty("config.file");
+        boolean configLoaded = false;
         try (InputStream is = (configPath != null)
                 ? new FileInputStream(configPath)
                 : BaseClass.class.getClassLoader().getResourceAsStream("config.properties")) {
             if (is != null) {
                 config.load(is);
+                configLoaded = true;
             } else {
                 System.out.println("config.properties not found on classpath and no -Dconfig.file provided. Using defaults.");
             }
@@ -44,6 +46,16 @@ public class BaseClass {
             System.out.println("Failed to load config: " + e.getMessage());
         }
 
+        // log where config came from and some key properties
+        if (configPath != null && configLoaded) {
+            System.out.println("Loaded config from path: " + configPath);
+        } else if (configLoaded) {
+            System.out.println("Loaded config from classpath: config.properties");
+        } else {
+            System.out.println("No config file loaded; using builtin defaults.");
+        }
+        System.out.println("Configured browser (raw): " + System.getProperty("browser", config.getProperty("browser", "chrome")));
+        System.out.println("Configured implicit.wait: " + config.getProperty("implicit.wait", "10"));
         // Decide browser: system property 'browser' overrides config property 'browser'
         String browserProp = System.getProperty("browser");
         String browser = (browserProp != null && !browserProp.isBlank()) ? browserProp : config.getProperty("browser", "chrome");
@@ -60,7 +72,6 @@ public class BaseClass {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (headless) chromeOptions.addArguments("--headless=new");
-                // add other common options if needed
                 wd = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
@@ -69,7 +80,6 @@ public class BaseClass {
                 wd = new FirefoxDriver(firefoxOptions);
                 break;
             case "safari":
-                // SafariDriver does not support headless mode
                 wd = new SafariDriver();
                 break;
             case "edge":
@@ -87,7 +97,6 @@ public class BaseClass {
 
         // common setup (use the thread-local driver)
         getDriver().manage().window().maximize();
-        // read implicit wait from config if present, fallback to 10
         int implicitWait = 10;
         try {
             String iw = config.getProperty("implicit.wait");
@@ -95,7 +104,29 @@ public class BaseClass {
         } catch (Exception e) { /* ignore and use default */ }
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
 
-        String baseUrl = config.getProperty("base.url", "https://stg-dad-website.indifi.com/");
+        // determine environment and base URL
+        // priority: -Denv, config property "env", default "staging"
+        String env = System.getProperty("env", config.getProperty("env", "staging")).trim();
+        String baseUrl = null;
+        try {
+            baseUrl = config.getProperty(env + ".url");
+        } catch (Exception e) {
+            baseUrl = null;
+        }
+        if (baseUrl == null || baseUrl.isBlank()) {
+            baseUrl = config.getProperty("base.url", "https://stg-dad-website.indifi.com/");
+            System.out.println("No URL found for env '" + env + "'. Falling back to base.url: " + baseUrl);
+        } else {
+            System.out.println("Using env '" + env + "' -> " + baseUrl);
+        }
+
+        // additional logging: final selection summary
+        System.out.println("Final test configuration:");
+        System.out.println("  env: " + env);
+        System.out.println("  baseUrl: " + baseUrl);
+        System.out.println("  browser: " + browser + (headless ? " (headless)" : ""));
+        System.out.println("  implicit.wait (s): " + implicitWait);
+
         getDriver().get(baseUrl);
     }
     

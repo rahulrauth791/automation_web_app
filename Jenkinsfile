@@ -4,8 +4,14 @@ pipeline {
     parameters {
         choice(
             name: 'TEST_SUITE',
-            choices: ['Login', 'Youtube', 'Online'],
+            choices: ['Login', 'Online', 'Youtube'],
             description: 'Select TestNG suite'
+        )
+
+        choice(
+            name: 'ENV',
+            choices: ['staging', 'preprod', 'prod'],
+            description: 'Select environment'
         )
 
         choice(
@@ -33,8 +39,8 @@ pipeline {
                 script {
                     def suiteMap = [
                         Login      : 'src/test/resources/login.xml',
-                        Youtube    : 'src/test/resources/youtube.xml',
-                        Online : 'src/test/resources/Online.xml'
+                        Online     : 'src/test/resources/Online.xml',
+                        Youtube    : 'src/test/resources/Youtube.xml'
                     ]
 
                     env.SUITE_FILE = suiteMap[params.TEST_SUITE]
@@ -43,7 +49,9 @@ pipeline {
                         error "Invalid TEST_SUITE selected: ${params.TEST_SUITE}"
                     }
 
-                    echo "Using suite file: ${env.SUITE_FILE}"
+                    echo "Suite      : ${params.TEST_SUITE}"
+                    echo "Environment: ${params.ENV}"
+                    echo "Browser    : ${params.BROWSER}"
                 }
             }
         }
@@ -53,7 +61,8 @@ pipeline {
                 sh """
                     mvn clean test \
                     -Dsurefire.suiteXmlFiles=${env.SUITE_FILE} \
-                    -Dbrowser=${params.BROWSER}
+                    -Dbrowser=${params.BROWSER} \
+                    -Denv=${params.ENV}
                 """
             }
         }
