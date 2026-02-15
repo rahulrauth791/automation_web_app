@@ -2,15 +2,16 @@ pipeline {
     agent any
 
     parameters {
-        string(
+        choice(
             name: 'TEST_SUITE',
-            defaultValue: 'src/test/resources/testng.xml',
-            description: 'Path of TestNG suite file'
+            choices: ['Login', 'Online', 'Youtube'],
+            description: 'Select test suite to execute'
         )
+
         choice(
             name: 'BROWSER',
             choices: ['chrome', 'firefox'],
-            description: 'Browser to run tests'
+            description: 'Browser'
         )
     }
 
@@ -27,11 +28,27 @@ pipeline {
             }
         }
 
-        stage('Run Selected TestNG Suite') {
+        stage('Resolve Suite') {
+            steps {
+                script {
+                    def suiteMap = [
+                        'Smoke'      : 'src/test/resources/testng-smoke.xml',
+                        'Sanity'     : 'src/test/resources/testng-sanity.xml',
+                        'Regression' : 'src/test/resources/testng-regression.xml',
+                        'Full'       : 'src/test/resources/testng-full.xml'
+                    ]
+
+                    env.SUITE_FILE = suiteMap[params.TEST_SUITE]
+                    echo "Running suite: ${env.SUITE_FILE}"
+                }
+            }
+        }
+
+        stage('Run Tests') {
             steps {
                 sh """
                     mvn clean test \
-                    -Dsurefire.suiteXmlFiles=${params.TEST_SUITE} \
+                    -Dsurefire.suiteXmlFiles=${env.SUITE_FILE} \
                     -Dbrowser=${params.BROWSER}
                 """
             }
