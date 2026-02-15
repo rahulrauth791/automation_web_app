@@ -4,7 +4,7 @@ pipeline {
     parameters {
         choice(
             name: 'TEST_SUITE',
-            choices: ['Login', 'Sanity', 'Regression'],
+            choices: ['Login', 'Youtube', 'Online'],
             description: 'Select TestNG suite'
         )
 
