@@ -4,8 +4,8 @@ pipeline {
     parameters {
         choice(
             name: 'TEST_SUITE',
-            choices: ['Login', 'Online', 'Youtube'],
-            description: 'Select test suite to execute'
+            choices: ['Login', 'Sanity', 'Regression'],
+            description: 'Select TestNG suite'
         )
 
         choice(
@@ -28,18 +28,22 @@ pipeline {
             }
         }
 
-        stage('Resolve Suite') {
+        stage('Resolve Test Suite') {
             steps {
                 script {
                     def suiteMap = [
-                        'Smoke'      : 'src/test/resources/testng-smoke.xml',
-                        'Sanity'     : 'src/test/resources/testng-sanity.xml',
-                        'Regression' : 'src/test/resources/testng-regression.xml',
-                        'Full'       : 'src/test/resources/testng-full.xml'
+                        Login      : 'src/test/resources/login.xml',
+                        Sanity     : 'src/test/resources/sanity.xml',
+                        Regression : 'src/test/resources/regression.xml'
                     ]
 
                     env.SUITE_FILE = suiteMap[params.TEST_SUITE]
-                    echo "Running suite: ${env.SUITE_FILE}"
+
+                    if (!env.SUITE_FILE) {
+                        error "Invalid TEST_SUITE selected: ${params.TEST_SUITE}"
+                    }
+
+                    echo "Using suite file: ${env.SUITE_FILE}"
                 }
             }
         }
