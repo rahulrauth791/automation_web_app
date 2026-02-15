@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-26T11:28:34 IST" name="Default suite" finished-at="2025-10-26T11:28:42 IST" duration-ms="7642">
+    <groups>
+    </groups>
+    <test started-at="2025-10-26T11:28:34 IST" name="Default test" finished-at="2025-10-26T11:28:42 IST" duration-ms="7642">
+      <class name="tests.OnlineTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.OnlineTest@4b45dcb8]" started-at="2025-10-26T11:28:34 IST" name="setup" finished-at="2025-10-26T11:28:37 IST" duration-ms="2649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="onlineJourney()[pri:0, instance:tests.OnlineTest@4b45dcb8]" started-at="2025-10-26T11:28:37 IST" name="onlineJourney" finished-at="2025-10-26T11:28:42 IST" duration-ms="4979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onlineJourney -->
+      </class> <!-- tests.OnlineTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
