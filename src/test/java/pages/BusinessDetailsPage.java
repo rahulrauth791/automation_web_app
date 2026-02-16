@@ -12,8 +12,12 @@ import java.util.HashMap;
 public class BusinessDetailsPage {
 WebDriver driver;
     
-    @FindBy(xpath = "//*[@id=\"continue\"]")	
-    WebElement continueField;
+    @FindBy(xpath = "//*[@id=\"continue\"]") WebElement continueField;
+
+    @FindBy(xpath = "//*[@id=\"continue\"]") WebElement pincodeFeld;
+
+
+
     
     
     @FindBy(css = ".error-message")
@@ -35,6 +39,12 @@ WebDriver driver;
         continueField.click();	
         System.out.println("Business Page submitted");
     }
+
+    public void setPincode(String pincode){
+        pincodeFeld.clear();
+		pincodeFeld.sendKeys(pincode);
+		 System.out.println("Entered Pincode");
+    }
     
     public String getErrorMessage() {
         return errorMessage.getText();
@@ -45,6 +55,20 @@ WebDriver driver;
 		System.out.println("Empty fields found: " + empty.keySet());
         // caller can now fill these before continuing if desired
 		// For demo, we will just print them and
+        if (!empty.isEmpty()) {
+            for (Map.Entry<String, WebElement> entry : empty.entrySet()) {
+                String fieldName = entry.getKey();
+                WebElement field = entry.getValue();
+                System.err.println(fieldName);
+                //field.clear();
+
+                if ("borrower_numberPostalCode".equals(fieldName)) {
+                    field.sendKeys("121001");
+                }
+                
+            }
+        }
+        
 		
         continueButton();
     }

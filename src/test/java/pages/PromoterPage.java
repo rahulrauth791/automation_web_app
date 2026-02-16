@@ -62,6 +62,12 @@ WebDriver driver;
 		enterDob(dob);
 		enterGender(gender);
 		enterPostalCode(postalcode);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		continueButton();
 	}
 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="46.396" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="surefire.suiteXmlFiles" value="src/test/resources/Online.xml"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/rahulrouth/rahulrauth791/automation_web_app/target/test-classes:/Users/rahulrouth/rahulrauth791/automation_web_app/target/classes:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-java/4.36.0/selenium-java-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-api/4.36.0/selenium-api-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.36.0/selenium-chrome-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.36.0/selenium-chromium-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-json/4.36.0/selenium-json-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.36.0/selenium-manager-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.36.0/selenium-devtools-v138-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.36.0/selenium-devtools-v139-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v140/4.36.0/selenium-devtools-v140-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.36.0/selenium-edge-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.36.0/selenium-firefox-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-http/4.36.0/selenium-http-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.36.0/selenium-ie-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.36.0/selenium-remote-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar:/Users/rahulrouth/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/rahulrouth/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rahulrouth/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/Users/rahulrouth/.m2/repository/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-api/1.54.0/opentelemetry-api-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-context/1.54.0/opentelemetry-context-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-common/1.54.0/opentelemetry-common-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.54.0/opentelemetry-exporter-logging-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.54.0/opentelemetry-sdk-common-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.54.0/opentelemetry-sdk-extension-autoconfigure-spi-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.54.0/opentelemetry-sdk-extension-autoconfigure-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.54.0/opentelemetry-sdk-trace-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.54.0/opentelemetry-sdk-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.54.0/opentelemetry-sdk-metrics-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.54.0/opentelemetry-sdk-logs-1.54.0.jar:/Users/rahulrouth/.m2/repository/net/bytebuddy/byte-buddy/1.17.7/byte-buddy-1.17.7.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-os/4.36.0/selenium-os-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.36.0/selenium-safari-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-support/4.36.0/selenium-support-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/rahulrouth/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/rahulrouth/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/rahulrouth/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/rahulrouth/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/rahulrouth/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk@17/17.0.18/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rahulrouth/rahulrauth791/automation_web_app/target/surefire/surefirebooter-20260216163102208_3.jar /Users/rahulrouth/rahulrauth791/automation_web_app/target/surefire 2026-02-16T16-31-02_108-jvmRun1 surefire-20260216163102208_1tmp surefire_0-20260216163102208_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/rahulrouth/rahulrauth791/automation_web_app/target/test-classes:/Users/rahulrouth/rahulrauth791/automation_web_app/target/classes:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-java/4.36.0/selenium-java-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-api/4.36.0/selenium-api-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.36.0/selenium-chrome-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.36.0/selenium-chromium-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-json/4.36.0/selenium-json-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.36.0/selenium-manager-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v138/4.36.0/selenium-devtools-v138-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v139/4.36.0/selenium-devtools-v139-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v140/4.36.0/selenium-devtools-v140-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.36.0/selenium-edge-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.36.0/selenium-firefox-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-http/4.36.0/selenium-http-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.36.0/selenium-ie-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.36.0/selenium-remote-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar:/Users/rahulrouth/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/rahulrouth/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rahulrouth/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/Users/rahulrouth/.m2/repository/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-api/1.54.0/opentelemetry-api-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-context/1.54.0/opentelemetry-context-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-common/1.54.0/opentelemetry-common-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.54.0/opentelemetry-exporter-logging-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.54.0/opentelemetry-sdk-common-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.54.0/opentelemetry-sdk-extension-autoconfigure-spi-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.54.0/opentelemetry-sdk-extension-autoconfigure-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.54.0/opentelemetry-sdk-trace-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.54.0/opentelemetry-sdk-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.54.0/opentelemetry-sdk-metrics-1.54.0.jar:/Users/rahulrouth/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.54.0/opentelemetry-sdk-logs-1.54.0.jar:/Users/rahulrouth/.m2/repository/net/bytebuddy/byte-buddy/1.17.7/byte-buddy-1.17.7.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-os/4.36.0/selenium-os-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.36.0/selenium-safari-driver-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/seleniumhq/selenium/selenium-support/4.36.0/selenium-support-4.36.0.jar:/Users/rahulrouth/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/rahulrouth/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/rahulrouth/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/rahulrouth/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/rahulrouth/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/rahulrouth/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/rahulrouth"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk@17/17.0.18/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/rahulrouth/rahulrauth791/automation_web_app"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/rahulrouth/rahulrauth791/automation_web_app/target/surefire/surefirebooter-20260216163102208_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.18+0"/>
+    <property name="user.name" value="rahulrouth"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.7.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="browser" value="chrome"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/rahulrouth/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/10/7bzts_4d1fz8s11lh9bkmr8c0000gn/T/"/>
+    <property name="java.version" value="17.0.18"/>
+    <property name="user.dir" value="/Users/rahulrouth/rahulrauth791/automation_web_app"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env" value="staging"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/rahulrouth/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="17.0.18+0"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="onlineJourney" classname="tests.OnlineTest" time="40.91">
+    <system-out><![CDATA[Loaded config from classpath: config.properties
+Configured browser (raw): chrome
+Configured implicit.wait: 10
+Using env 'staging' -> https://stg-dad-website.indifi.com
+Final test configuration:
+  env: staging
+  baseUrl: https://stg-dad-website.indifi.com
+  browser: chrome
+  implicit.wait (s): 10
+Entered Turnover
+Entered Name
+Entered Phone
+Entered Email
+clicked ApplyNow Button
+Entered OTP
+Entered OTP Verfied
+Entered Pan
+Entered submit
+Entered Dob
+Entered gender
+Entered postalcode
+Promoter Page submitted
+Ancestor form not found; scanning whole page for fields.
+Field 'unnamed' (input) is empty.
+Field 'unnamed' (input) is empty.
+Field 'unnamed' (input) is empty.
+Field 'unnamed' (input) is empty.
+Field 'borrower_numberPostalCode' (input) is prefilled with: 673661
+Field 'unnamed' (input) is empty.
+Field 'online_platform_url' (input) is empty.
+Field 'unnamed' (input) is empty.
+Empty fields found: [online_platform_url, unnamed]
+Business Page submitted
+Offer Page submitted
+Enter Address2
+Enter Address3
+Enter Address ownertype
+Residence Address page submit
+Business Address page submit
+Photograph uploaded successfully
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Feb 16, 2026 4:31:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 144, returning the closest version; found: 140; Please update to a Selenium version that supports CDP version 144
+online_platform_url
+unnamed
+]]></system-err>
+  </testcase>
+</testsuite>

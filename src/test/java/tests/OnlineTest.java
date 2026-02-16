@@ -45,7 +45,7 @@ public class OnlineTest extends BaseClass{
          offerPage.submit();
          residenceAddressPage.submit("hghghgh", "hgftttdtdt", "rented");
          businessAddressPage.submit();
-         String filePath = "/Users/rahulrouth/eclipse-workspace/AutomationDemo/src/test/java/resources/pan_dummy.png";
+         String filePath = "/Users/rahulrouth/rahulrauth791/automation_web_app/src/test/java/resources/pan_dummy.png";
          kyc.submit(filePath, filePath);
          
      }
